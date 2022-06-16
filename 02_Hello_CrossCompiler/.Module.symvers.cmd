@@ -1,0 +1,1 @@
+cmd_/home/cdac/Music/ELDD/02_Hello_CrossCompiler/Module.symvers := sed 's/\.ko$$/\.o/' /home/cdac/Music/ELDD/02_Hello_CrossCompiler/modules.order | scripts/mod/modpost -m -a  -o /home/cdac/Music/ELDD/02_Hello_CrossCompiler/Module.symvers -e -i Module.symvers   -T -
