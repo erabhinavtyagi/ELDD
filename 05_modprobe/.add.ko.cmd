@@ -1,0 +1,1 @@
+cmd_/home/cdac/Music/ELDD/05_modprobe/add.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/cdac/Music/ELDD/05_modprobe/add.ko /home/cdac/Music/ELDD/05_modprobe/add.o /home/cdac/Music/ELDD/05_modprobe/add.mod.o;  true

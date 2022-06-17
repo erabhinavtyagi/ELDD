@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/cdac/Music/ELDD/05_modprobe'
+make -C /lib/modules/5.4.0-121-generic/build M=/home/cdac/Music/ELDD/05_modprobe modules
+make: Leaving directory '/home/cdac/Music/ELDD/05_modprobe'
+ 

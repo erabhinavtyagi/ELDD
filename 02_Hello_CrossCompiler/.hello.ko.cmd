@@ -1,1 +1,0 @@
-cmd_/home/cdac/Music/ELDD/02_Hello_CrossCompiler/hello.ko := arm-linux-gnueabihf-ld -r  -EL  --build-id=sha1  -T scripts/module.lds -o /home/cdac/Music/ELDD/02_Hello_CrossCompiler/hello.ko /home/cdac/Music/ELDD/02_Hello_CrossCompiler/hello.o /home/cdac/Music/ELDD/02_Hello_CrossCompiler/hello.mod.o;  true
