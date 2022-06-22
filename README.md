@@ -210,3 +210,8 @@ Here,
 'c' - Char Device
 '234' - Major Number
 '0' - Minor Number 
+
+cross check it using following command:
+```
+cat /proc/devices
+```
