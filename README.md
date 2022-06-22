@@ -182,3 +182,31 @@ clean:
 - Module Parameters (command line arguments)
 - Export Symbol (Stacking and unstacking of modules)
 - Used Modprobe command to add the dependent modules automatically
+Use following command to install the dependent modules
+
+```bash
+make
+make install
+```
+and check the folder: /lib/modules/<uname -r>/extra
+Then Run:
+'''
+modprobe -i avg
+modprobe -r avg
+'''
+'i' - To Insert Kernel Modules
+'r' - To Remove Kernel Modules
+
+## Day 6
+- Major and Minor Numbers
+1. Static Allocation
+2. Dynamic Allocation
+After module insertion commands used are:
+```bash
+mknod -m 777 /dev/char c 234 0
+```
+Here,
+'777' is permissions.
+'c' - Char Device
+'234' - Major Number
+'0' - Minor Number 
