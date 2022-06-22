@@ -1,8 +1,10 @@
-obj-m := add.o avg.o
+obj-y :=  avg_mod/ add_mod/
 
-KERNELDIR = /lib/modules/5.4.0-121-generic/build
+KERNELDIR = /lib/modules/$(shell uname -r)/build
 
-all :   
+PWD := $(shell pwd)
+
+default :   
 	make -C $(KERNELDIR) M=$(PWD) modules
 
 clean: 

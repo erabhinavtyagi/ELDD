@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/cdac/Ajit/ELDD/05_modprobe/avg2'
+make -C /lib/modules/5.15.0-39-generic/build/ M=/home/cdac/Ajit/ELDD/05_modprobe/avg2 modules
+make: Leaving directory '/home/cdac/Ajit/ELDD/05_modprobe/avg2'
+ 

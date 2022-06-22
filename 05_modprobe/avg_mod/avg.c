@@ -1,14 +1,12 @@
 // AVERAGE Module
-
-
-#include<linux/init.h>
-#include<linux/kernel.h>
-#include<linux/module.h>
-#include"header.h"
+#include <linux/init.h>
+#include <linux/kernel.h>
+#include <linux/module.h>
+#include "header.h"
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("ABHINAV TYAGI");
-MODULE_DESCRIPTION("Calling dependent module- my_add()");
+MODULE_AUTHOR("ABHINAV");
+MODULE_DESCRIPTION("Calling dependent module");
 
 static int a = 10;
 static int b = 20;

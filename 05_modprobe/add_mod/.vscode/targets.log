@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 23 00:44:14 2022
+# Make data base, printed on Tue Jun 21 22:27:18 2022
 
 # Variables
 
@@ -23,7 +25,7 @@ SNAP_INSTANCE_KEY =
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-5e788755-6e81-4c37-8a30-d3c753101997.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-fbc7ee67-61cd-445b-86e1-b27024050f00.sock
 # environment
 VSCODE_CWD = /home/cdac
 # default
@@ -40,8 +42,8 @@ GDK_PIXBUF_MODULEDIR = /snap/code/99/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.1
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
-# environment
-PWD = /home/cdac/Abhinav/ELDD
+# makefile (from 'Makefile', line 4)
+PWD := /home/cdac/Ajit/ELDD/05_modprobe/add2
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -57,15 +59,17 @@ VSCODE_CODE_CACHE_PATH = /home/cdac/.config/Code/CachedData/30d9c6cd9483b2cc5866
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.NI3GO1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.3IK3N1
 # default
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile (from 'Makefile', line 3)
+KERNELDIR = /lib/modules/5.15.0-39-generic/build
 # makefile
 MAKEFLAGS = pqrR
 # makefile
-CURDIR := /home/cdac/Abhinav/ELDD
+CURDIR := /home/cdac/Ajit/ELDD/05_modprobe/add2
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -88,8 +92,8 @@ XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 +D = $(patsubst %/,%,$(dir $+))
 # environment
 XDG_SESSION_DESKTOP = ubuntu
-# makefile
-MAKEFILE_LIST := 
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
 # environment
 SNAP_REEXEC = 
 # automatic
@@ -97,7 +101,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 19234
+VSCODE_PID = 63098
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -105,7 +109,7 @@ XDG_SESSION_TYPE = wayland
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
-SESSION_MANAGER = local/destroyer:@/tmp/.ICE-unix/1732,unix/destroyer:/tmp/.ICE-unix/1732
+SESSION_MANAGER = local/destroyer:@/tmp/.ICE-unix/1696,unix/destroyer:/tmp/.ICE-unix/1696
 # automatic
 *F = $(notdir $*)
 # environment
@@ -151,7 +155,7 @@ SNAP_USER_COMMON = /home/cdac/snap/code/common
 # environment
 SNAP = /snap/code/99
 # environment
-INVOCATION_ID = af9d7d17f2b546d49db1caec0afe8124
+INVOCATION_ID = f090ae8dae154ee2b7b0a65e295856b3
 # environment
 SNAP_REVISION = 99
 # environment
@@ -185,9 +189,9 @@ GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.deskto
 # environment
 SNAP_ARCH = amd64
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := default
 # environment
-SYSTEMD_EXEC_PID = 1758
+SYSTEMD_EXEC_PID = 1722
 # environment
 DISPLAY = :0
 # environment
@@ -196,6 +200,8 @@ USER = cdac
 GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
 # environment
 DISABLE_WAYLAND = 1
 # environment
@@ -203,17 +209,19 @@ SNAP_DATA = /var/snap/code/99
 # environment
 SNAP_CONTEXT = Ew71as25vUq6wR0xRVcxjLqam6oqkvJa1AqiPsUAwc7y6V3-qFL2
 # environment
-MANAGERPID = 1509
+MANAGERPID = 1474
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 19182
+GIO_LAUNCHED_DESKTOP_FILE_PID = 63021
 # environment
 _ = /snap/code/99/usr/share/code/code
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 1)
+obj-m := add2_ss1.o
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/cdac/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:23488
+JOURNAL_STREAM = 8:28985
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -257,7 +265,7 @@ GDMSESSION = ubuntu
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=123/1024=12%, Rehash=0, Collisions=4/150=3%
+# Load=126/1024=12%, Rehash=0, Collisions=4/160=2%
 
 # Pattern-specific Variable Values
 
@@ -265,22 +273,37 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2053, inode 5508912): 12 files, no impossibilities.
+# . (device 2053, inode 5638235): 14 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
+ 
 # Files
+
+default:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 7):
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2022-06-21 22:04:52.556172494
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 10):
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) clean
 
 # Not a target:
 .DEFAULT:
@@ -295,37 +318,20 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-makefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
-
-# Not a target:
-GNUmakefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
- 
-make: *** No rule to make target 'all'.  Stop.
-
-
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/16=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 224 B / avg = 11 B
-# current buf: size = 8162 B / used = 224 B / count = 20 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 21 / storage = 240 B / avg = 11 B
+# current buf: size = 8162 B / used = 240 B / count = 21 / avg = 11 B
 
-# strcache performance: lookups = 23 / hit rate = 13%
+# strcache performance: lookups = 27 / hit rate = 22%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=0/23=0%
-# Finished Make data base on Thu Jun 23 00:44:14 2022
+# Load=21/8192=0%, Rehash=0, Collisions=0/27=0%
+# Finished Make data base on Tue Jun 21 22:27:18 2022
 
  

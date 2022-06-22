@@ -1,1 +1,0 @@
-cmd_/home/cdac/Music/ELDD/05_modprobe/avg.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/cdac/Music/ELDD/05_modprobe/avg.ko /home/cdac/Music/ELDD/05_modprobe/avg.o /home/cdac/Music/ELDD/05_modprobe/avg.mod.o;  true

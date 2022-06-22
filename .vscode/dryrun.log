@@ -1,6 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/cdac/Music/ELDD'
-make: Leaving directory '/home/cdac/Music/ELDD'
+make: Entering directory '/home/cdac/Abhinav/ELDD'
+make: Leaving directory '/home/cdac/Abhinav/ELDD'
  
 make: *** No targets specified and no makefile found.  Stop.
 
