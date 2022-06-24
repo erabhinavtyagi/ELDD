@@ -198,20 +198,78 @@ modprobe -r avg
 'r' - To Remove Kernel Modules
 
 ## Day 6
-- Major and Minor Numbers
+
+**Major Number and Minor Number**
+
 1. Static Allocation
+    MKDEV(250, 0)
+    register_chrdev_region(device, 1, "simplechardriver")
+
 2. Dynamic Allocation
+    alloc_chrdev_region(&device, 0, 1, "charDeviceDemo")
+
+**CREATING DEVICE FILE**
+
+1. Using "mknod" Method
+
 After module insertion commands used are:
 ```bash
 mknod -m 777 /dev/char c 234 0
 ```
 Here,
-'777' is permissions.
+'777' is permissions
+/dev/char is name of Device File
 'c' - Char Device
-'234' - Major Number
+'234' - Major Number which is allocated by kernel to us dynamically
 '0' - Minor Number 
+
+Create a device file dynamically using mknod and then check using "ls -l /dev/"
 
 cross check it using following command:
 ```
 cat /proc/devices
 ```
+Unload the driver using "sudo rmmod".
+
+2. Using "Struct class" Method
+
+```
+class_create(THIS_MODULE,"CharDevClass");
+```
+
+## Day 7
+
+- cdev Structure
+- File Operation Structure
+- File Structure
+- inode Structure
+
+### **Assignments**:
+
+1. Write a Character Driver with open and close functionality.
+    Test the driver by writing an application that opens and closes the device driver. When open or closed, the open and close calls in the driver should be executed.
+
+2. Write a Character Driver with open, read, write, close.
+    Test the driver through a User Application by reading data from driver and writing data to the Driver.
+
+3. Write a Character Driver to Dynamically allocate a major,minor number pair from kernel.
+    Test the same and conclude.
+
+4. Write a Calculator Driver in the Kernel which performs the following:
+- **Create 4 Device Numbers**: Each device number depicts a specific calculation operation like Add, Subtract, Multiply, Divide.
+- **Implement 8 Methods**: Read_add, Read_sub, Read_mul, Read_div, Write_add, Write_sub, Write_mul, Write_div.
+- In User Space, create 4 devices nodes for the 4device numbers created -/dev/AddDev, /dev/SubDev, /dev/MulDiv, /dev/DivDev.
+- Write 4 user applications in the user space to test the above. If /dev/AddDev application is run, it should write 2 numbers to the kernel and the kernel should add it and return the sum in the subsequent read.
+
+## Day 8
+
+- IOCTL (Input-Output Control)
+- Program to implement "IOCTL".
+
+## Day 9
+
+- Wait Queue
+    - Initialization
+    - Process going to sleep
+    - Waking up queued task    
+- Program to implement its concept.

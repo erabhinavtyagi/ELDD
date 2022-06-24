@@ -1,0 +1,1 @@
+cmd_/home/cdac/Abhinav/ELDD/07_DeviceFile/02_classStruct/Module.symvers := sed 's/\.ko$$/\.o/' /home/cdac/Abhinav/ELDD/07_DeviceFile/02_classStruct/modules.order | scripts/mod/modpost -m -a  -o /home/cdac/Abhinav/ELDD/07_DeviceFile/02_classStruct/Module.symvers -e -i Module.symvers   -T -

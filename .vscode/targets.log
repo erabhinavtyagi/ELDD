@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 23 00:44:14 2022
+# Make data base, printed on Fri Jun 24 18:12:06 2022
 
 # Variables
 
@@ -23,7 +25,7 @@ SNAP_INSTANCE_KEY =
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-5e788755-6e81-4c37-8a30-d3c753101997.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-cb525252-a825-4289-919c-1fca16667afe.sock
 # environment
 VSCODE_CWD = /home/cdac
 # default
@@ -97,7 +99,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 19234
+VSCODE_PID = 113232
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -205,7 +207,7 @@ SNAP_CONTEXT = Ew71as25vUq6wR0xRVcxjLqam6oqkvJa1AqiPsUAwc7y6V3-qFL2
 # environment
 MANAGERPID = 1509
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 19182
+GIO_LAUNCHED_DESKTOP_FILE_PID = 113185
 # environment
 _ = /snap/code/99/usr/share/code/code
 # environment
@@ -265,9 +267,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2053, inode 5508912): 12 files, no impossibilities.
+# . (device 2053, inode 5508912): 14 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -294,6 +296,7 @@ all:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
+ 
 
 # Not a target:
 makefile:
@@ -308,9 +311,6 @@ GNUmakefile:
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
- 
-make: *** No rule to make target 'all'.  Stop.
-
 
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
@@ -320,12 +320,12 @@ make: *** No rule to make target 'all'.  Stop.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 224 B / avg = 11 B
-# current buf: size = 8162 B / used = 224 B / count = 20 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 239 B / avg = 10 B
+# current buf: size = 8162 B / used = 239 B / count = 22 / avg = 10 B
 
-# strcache performance: lookups = 23 / hit rate = 13%
+# strcache performance: lookups = 25 / hit rate = 12%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=0/23=0%
-# Finished Make data base on Thu Jun 23 00:44:14 2022
+# Load=22/8192=0%, Rehash=0, Collisions=0/25=0%
+# Finished Make data base on Fri Jun 24 18:12:06 2022
 
  

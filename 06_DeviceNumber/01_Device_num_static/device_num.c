@@ -11,7 +11,7 @@ MODULE_AUTHOR("ABHINAV TYAGI");
 
 dev_t device = MKDEV(250, 0);   // MAX value of Major number allowed = 511
 
-//MOdule init function
+//Module init function
 static int __init dev_init(void)
 {
     register_chrdev_region(device, 1, "simplechardriver");
@@ -19,7 +19,7 @@ static int __init dev_init(void)
     printk(KERN_INFO "kernel module inserted successfully");
     return 0;
 }
-//MOdule exit function
+//Module exit function
 static void __exit dev_exit(void)
 {
     unregister_chrdev_region(device, 1);

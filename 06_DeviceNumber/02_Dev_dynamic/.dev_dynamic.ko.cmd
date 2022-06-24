@@ -1,0 +1,1 @@
+cmd_/home/cdac/Abhinav/ELDD/07_Dev_dynamic/dev_dynamic.ko := ld -r -m elf_x86_64 --build-id=sha1  -T scripts/module.lds -o /home/cdac/Abhinav/ELDD/07_Dev_dynamic/dev_dynamic.ko /home/cdac/Abhinav/ELDD/07_Dev_dynamic/dev_dynamic.o /home/cdac/Abhinav/ELDD/07_Dev_dynamic/dev_dynamic.mod.o;  true
