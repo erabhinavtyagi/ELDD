@@ -273,3 +273,18 @@ class_create(THIS_MODULE,"CharDevClass");
     - Process going to sleep
     - Waking up queued task    
 - Program to implement its concept.
+1. Wait Queue - Static
+2. Wait Queue - Dynamic
+```bash
+make
+sudo -s
+dmesg -C
+dmesg
+echo "0" > /dev/realdriver //for write
+dmesg
+cat /dev/realdriver    //for read
+dmesg
+rmmod dynam
+dmesg
+exit 
+```

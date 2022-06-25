@@ -1,0 +1,1 @@
+cmd_/home/cdac/Abhinav/ELDD/10_ioctl/c_ioctl.ko := ld -r -m elf_x86_64 --build-id=sha1  -T scripts/module.lds -o /home/cdac/Abhinav/ELDD/10_ioctl/c_ioctl.ko /home/cdac/Abhinav/ELDD/10_ioctl/c_ioctl.o /home/cdac/Abhinav/ELDD/10_ioctl/c_ioctl.mod.o;  true

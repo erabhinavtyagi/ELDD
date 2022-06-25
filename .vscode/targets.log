@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jun 24 18:12:06 2022
+# Make data base, printed on Sat Jun 25 18:21:23 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ SNAP_INSTANCE_KEY =
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-cb525252-a825-4289-919c-1fca16667afe.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-835d0231-508b-4e7c-925c-afde2429def4.sock
 # environment
 VSCODE_CWD = /home/cdac
 # default
@@ -59,7 +59,7 @@ VSCODE_CODE_CACHE_PATH = /home/cdac/.config/Code/CachedData/30d9c6cd9483b2cc5866
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.NI3GO1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.6NXIO1
 # default
 .LOADED := 
 # default
@@ -99,7 +99,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 113232
+VSCODE_PID = 18544
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -107,7 +107,7 @@ XDG_SESSION_TYPE = wayland
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
-SESSION_MANAGER = local/destroyer:@/tmp/.ICE-unix/1732,unix/destroyer:/tmp/.ICE-unix/1732
+SESSION_MANAGER = local/destroyer:@/tmp/.ICE-unix/1719,unix/destroyer:/tmp/.ICE-unix/1719
 # automatic
 *F = $(notdir $*)
 # environment
@@ -153,7 +153,7 @@ SNAP_USER_COMMON = /home/cdac/snap/code/common
 # environment
 SNAP = /snap/code/99
 # environment
-INVOCATION_ID = af9d7d17f2b546d49db1caec0afe8124
+INVOCATION_ID = ad4b8b32cee4460cb46762773b52248d
 # environment
 SNAP_REVISION = 99
 # environment
@@ -189,7 +189,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 1758
+SYSTEMD_EXEC_PID = 1761
 # environment
 DISPLAY = :0
 # environment
@@ -205,9 +205,9 @@ SNAP_DATA = /var/snap/code/99
 # environment
 SNAP_CONTEXT = Ew71as25vUq6wR0xRVcxjLqam6oqkvJa1AqiPsUAwc7y6V3-qFL2
 # environment
-MANAGERPID = 1509
+MANAGERPID = 1515
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 113185
+GIO_LAUNCHED_DESKTOP_FILE_PID = 18497
 # environment
 _ = /snap/code/99/usr/share/code/code
 # environment
@@ -215,9 +215,10 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/cdac/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:23488
+JOURNAL_STREAM = 8:30818
 # environment
 XDG_SESSION_CLASS = user
+ 
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -267,9 +268,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2053, inode 5508912): 14 files, no impossibilities.
+# . (device 2053, inode 5508912): 16 files, no impossibilities.
 
-# 14 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -296,7 +297,6 @@ all:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
- 
 
 # Not a target:
 makefile:
@@ -320,12 +320,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 22 / storage = 239 B / avg = 10 B
-# current buf: size = 8162 B / used = 239 B / count = 22 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 24 / storage = 282 B / avg = 11 B
+# current buf: size = 8162 B / used = 282 B / count = 24 / avg = 11 B
 
-# strcache performance: lookups = 25 / hit rate = 12%
+# strcache performance: lookups = 27 / hit rate = 11%
 # hash-table stats:
-# Load=22/8192=0%, Rehash=0, Collisions=0/25=0%
-# Finished Make data base on Fri Jun 24 18:12:06 2022
+# Load=24/8192=0%, Rehash=0, Collisions=0/27=0%
+# Finished Make data base on Sat Jun 25 18:21:23 2022
 
  

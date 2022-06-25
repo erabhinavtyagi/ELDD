@@ -1,4 +1,4 @@
-obj-m := statWait.o
+obj-m := dyn_waitQ.o
 
 KERNDIR = /lib/modules/$(shell uname -r)/build
 
@@ -9,4 +9,3 @@ all:
 
 clean:
 	make -C $(KERNDIR) M=$(PWD) clean
-                                       
