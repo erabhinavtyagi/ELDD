@@ -239,10 +239,24 @@ class_create(THIS_MODULE,"CharDevClass");
 
 ## Day 7
 
+**Implementing a CHAR Driver**
+
+Step 1: Allocate the Device Number(Major & Minor Number). This can be done with following functions.
+- register_chrdev_region();
+- alloc_chrdev_region();
+
+Step 2: Implement File Operations
+- Open, Read, Write, Release, IOCTL
+
+Step 3: Register the CHAR Driver in the kernel using following functions.
+- cdev_init()
+- cdev_add()
+
+
 - cdev Structure
-- File Operation Structure
-- File Structure
-- inode Structure
+    - File Operation Structure
+    - File Structure
+    - Device Node or inode Structure
 
 ### **Assignments**:
 
@@ -271,18 +285,20 @@ class_create(THIS_MODULE,"CharDevClass");
 - Wait Queue
     - Initialization
     - Process going to sleep
-    - Waking up queued task    
+    - Waking up queued task 
+
 - Program to implement its concept.
 1. Wait Queue - Static
 2. Wait Queue - Dynamic
+
 ```bash
 make
 sudo -s
 dmesg -C
 dmesg
-echo "0" > /dev/realdriver //for write
+echo "0" > /dev/realdriver  //for write
 dmesg
-cat /dev/realdriver    //for read
+cat /dev/realdriver     //for read
 dmesg
 rmmod dynam
 dmesg
