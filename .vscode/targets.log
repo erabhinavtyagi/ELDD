@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun 26 17:30:42 2022
+# Make data base, printed on Mon Jun 27 10:11:58 2022
 
 # Variables
 
@@ -25,7 +23,7 @@ SNAP_INSTANCE_KEY =
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-bfc645c0-fcb1-4bb9-b52d-da4574900d58.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-8dba024a-1ea2-4688-a983-61bfcb970a97.sock
 # environment
 VSCODE_CWD = /home/cdac
 # default
@@ -99,7 +97,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 38690
+VSCODE_PID = 46008
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -207,7 +205,7 @@ SNAP_CONTEXT = Ew71as25vUq6wR0xRVcxjLqam6oqkvJa1AqiPsUAwc7y6V3-qFL2
 # environment
 MANAGERPID = 1496
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 38646
+GIO_LAUNCHED_DESKTOP_FILE_PID = 45958
 # environment
 _ = /snap/code/99/usr/share/code/code
 # environment
@@ -282,11 +280,13 @@ Makefile:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
- 
 #  Failed to be updated.
 
 # Not a target:
 .DEFAULT:
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -326,6 +326,6 @@ GNUmakefile:
 # strcache performance: lookups = 27 / hit rate = 11%
 # hash-table stats:
 # Load=24/8192=0%, Rehash=0, Collisions=0/27=0%
-# Finished Make data base on Sun Jun 26 17:30:42 2022
+# Finished Make data base on Mon Jun 27 10:11:58 2022
 
  

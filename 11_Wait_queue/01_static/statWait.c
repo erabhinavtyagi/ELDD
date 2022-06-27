@@ -17,34 +17,34 @@ MODULE_DESCRIPTION("Wait Queue Static Method.");
 uint32_t read_count = 0;
 static struct task_struct *wait_thread;
 
-DECLARE_WAIT_QUEUE_HEAD(wait_queue_etx);
+DECLARE_WAIT_QUEUE_HEAD(wait_queue_stat);
 
 dev_t dev = 0;
 static struct class *dev_class;
-static struct cdev etx_cdev;
+static struct cdev stat_cdev;
 int wait_queue_flag = 0;
 
 // Function Prototypes
 
-static int 	__init etx_driver_init(void);
-static void 	__exit etx_driver_exit(void);
+static int 	__init stat_driver_init(void);
+static void 	__exit stat_driver_exit(void);
 
 //-------------- DRIVER FUNCTIONS-------------------------------------
 
-static int 	etx_open(struct inode *inode, struct file *file);
-static int 	etx_release(struct inode *inode, struct file *file);
-static ssize_t 	etx_read(struct file *filp, char __user *buf, size_t len, loff_t * off);
-static ssize_t 	etx_write(struct file *filp, const char *buf, size_t len, loff_t * off);
+static int 	stat_open(struct inode *inode, struct file *file);
+static int 	stat_release(struct inode *inode, struct file *file);
+static ssize_t 	stat_read(struct file *filp, char __user *buf, size_t len, loff_t * off);
+static ssize_t 	stat_write(struct file *filp, const char *buf, size_t len, loff_t * off);
 
 // FILE OPERATION STRUCTURE
 
 static struct file_operations fops =
 {
 	.owner		= THIS_MODULE,
-	.read		= etx_read,
-	.write		= etx_write,
-	.open		= etx_open,
-	.release 	= etx_release,
+	.read		= stat_read,
+	.write		= stat_write,
+	.open		= stat_open,
+	.release 	= stat_release,
 };
 
 // THREAD FUNCTION
@@ -54,7 +54,7 @@ static int wait_function(void *unused)
 	while(1)
 	{
 	pr_info("Waiting for Event.\n");
-	wait_event_interruptible(wait_queue_etx, wait_queue_flag != 0);
+	wait_event_interruptible(wait_queue_stat, wait_queue_flag != 0);
 	
 	if(wait_queue_flag == 2)
 	{
@@ -70,7 +70,7 @@ static int wait_function(void *unused)
 
 // OPEN THE DEVICE FILE
 
-static int etx_open(struct inode *inode, struct file *file)
+static int stat_open(struct inode *inode, struct file *file)
 {
 	pr_info("Device File Opened...\n");
 	return 0;
@@ -78,7 +78,7 @@ static int etx_open(struct inode *inode, struct file *file)
 
 // CLOSE THE DEVICE FILE
 
-static int etx_release(struct inode *inode, struct file *file)
+static int stat_release(struct inode *inode, struct file *file)
 {
 	pr_info("Device File Closed...\n");
 	return 0;
@@ -86,17 +86,17 @@ static int etx_release(struct inode *inode, struct file *file)
 
 // READ THE DEVICE FILE
 
-static ssize_t etx_read(struct file *filp, char __user *buf, size_t len, loff_t *off)
+static ssize_t stat_read(struct file *filp, char __user *buf, size_t len, loff_t *off)
 {
 	pr_info("Read Function\n");
 	wait_queue_flag = 1;
-	wake_up_interruptible(&wait_queue_etx);
+	wake_up_interruptible(&wait_queue_stat);
 	return 0;
 }
 
 // WRITE THE DEVICE FILE
 
-static ssize_t etx_write(struct file *filp, const char __user *buf, size_t len, loff_t *off)
+static ssize_t stat_write(struct file *filp, const char __user *buf, size_t len, loff_t *off)
 {
 	pr_info("Write Function\n");
 	return len;
@@ -104,10 +104,10 @@ static ssize_t etx_write(struct file *filp, const char __user *buf, size_t len, 
 
 // ------------------- MODULE INITIALIZATION -------------------------
 
-static int __init etx_driver_init(void)
+static int __init stat_driver_init(void)
 {
 	// Allocating Major Number
-	if ((alloc_chrdev_region(&dev, 0, 1, "etx_Dev")) < 0 )
+	if ((alloc_chrdev_region(&dev, 0, 1, "stat_Dev")) < 0 )
 	{
 	pr_info("Can not allocate Major Number.\n");
 	return -1;
@@ -116,12 +116,12 @@ static int __init etx_driver_init(void)
 	pr_info("Major Number: %d  Minor Number: %d \n", MAJOR(dev),MINOR(dev));
 
 	// CREATING CDEV STRUCTURE
-	cdev_init(&etx_cdev, &fops);
-	etx_cdev.owner = THIS_MODULE;
-	etx_cdev.ops = &fops;
+	cdev_init(&stat_cdev, &fops);
+	stat_cdev.owner = THIS_MODULE;
+	stat_cdev.ops = &fops;
 
 	// ADDING CHARACTER DEVICE TO THE SYSTEM
-	if((cdev_add(&etx_cdev, dev, 1))<0)
+	if((cdev_add(&stat_cdev, dev, 1))<0)
 	{
 	pr_info("Can not add the device to the system.\n");
 	goto r_class;
@@ -165,16 +165,16 @@ r_class:
 
 //----------- Module Exit Function --------------------------------------
 
-static void __exit etx_driver_exit(void)
+static void __exit stat_driver_exit(void)
 {
 	wait_queue_flag = 2;
-	wake_up_interruptible(&wait_queue_etx);
+	wake_up_interruptible(&wait_queue_stat);
 	device_destroy(dev_class, dev);
 	class_destroy(dev_class);
-	cdev_del(&etx_cdev);
+	cdev_del(&stat_cdev);
 	unregister_chrdev_region(dev, 1);
 	pr_info("Device Driver Remove...Done\n");
 }
 
-module_init(etx_driver_init);
-module_exit(etx_driver_exit);
+module_init(stat_driver_init);
+module_exit(stat_driver_exit);

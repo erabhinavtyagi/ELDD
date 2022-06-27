@@ -19,13 +19,13 @@ int32_t value = 0 ;
 int32_t oper = 0 ;
 dev_t dev=0;
 static struct class *dev_class;
-static struct cdev etx_cdev ;
+static struct cdev calc_cdev ;
 
-static int __init etx_driver_init(void);
-static void __exit etx_driver_exit(void);
+static int __init calc_driver_init(void);
+static void __exit calc_driver_exit(void);
 
 
-static long etx_ioctl(struct file *file,unsigned int cmd,unsigned long arg);
+static long calc_ioctl(struct file *file,unsigned int cmd,unsigned long arg);
 
 
 
@@ -34,12 +34,12 @@ static long etx_ioctl(struct file *file,unsigned int cmd,unsigned long arg);
 static struct file_operations fops = 
 {
     .owner      = THIS_MODULE,
-    .unlocked_ioctl = etx_ioctl,
+    .unlocked_ioctl = calc_ioctl,
 
 };
 
 
-static long etx_ioctl(struct file *file,unsigned int cmd,unsigned long arg)
+static long calc_ioctl(struct file *file,unsigned int cmd,unsigned long arg)
 {
     static int count = 0;
     switch(cmd) {
@@ -86,31 +86,31 @@ static long etx_ioctl(struct file *file,unsigned int cmd,unsigned long arg)
     return 0;
 }
 
-static int __init etx_driver_init(void)
+static int __init calc_driver_init(void)
 {
-    if((alloc_chrdev_region(&dev,0,1,"etx_dev")) <0){
+    if((alloc_chrdev_region(&dev,0,1,"calc_dev")) <0){
         printk(KERN_INFO"cannot allocate major number\n");
         return -1;
         }
     printk(KERN_INFO " MAJOR = %d Minor = %d\n",MAJOR(dev),MINOR(dev));
 
 
-    cdev_init(&etx_cdev,&fops);
+    cdev_init(&calc_cdev,&fops);
 
 
-    if((cdev_add(&etx_cdev,dev,1)) < 0){
+    if((cdev_add(&calc_cdev,dev,1)) < 0){
         printk(KERN_INFO "cannot add device to the system\n");
         goto r_class;
         }
 
      /*Creating struct class*/
-        if((dev_class = class_create(THIS_MODULE,"etx_class")) == NULL){
+        if((dev_class = class_create(THIS_MODULE,"calc_class")) == NULL){
             printk(KERN_INFO "Cannot create the struct class\n");
             goto r_class;
         }
 
         /*Creating device*/
-        if((device_create(dev_class,NULL,dev,NULL,"etx_device")) == NULL){
+        if((device_create(dev_class,NULL,dev,NULL,"calc_device")) == NULL){
             printk(KERN_INFO "Cannot create the Device 1\n");
             goto r_device;
         }
@@ -124,17 +124,17 @@ r_class:
         return -1;
 }
 
-void __exit etx_driver_exit(void)
+void __exit calc_driver_exit(void)
 {
         device_destroy(dev_class,dev);
         class_destroy(dev_class);
-        cdev_del(&etx_cdev);
+        cdev_del(&calc_cdev);
         unregister_chrdev_region(dev, 1);
     printk(KERN_INFO "Device Driver Remove...Done!!!\n");
 }
 
-module_init(etx_driver_init);
-module_exit(etx_driver_exit);
+module_init(calc_driver_init);
+module_exit(calc_driver_exit);
 
 
 MODULE_LICENSE("GPL");
