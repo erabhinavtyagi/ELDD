@@ -33,8 +33,12 @@ static long calc_ioctl(struct file *file,unsigned int cmd,unsigned long arg);
 
 static struct file_operations fops = 
 {
-    .owner      = THIS_MODULE,
-    .unlocked_ioctl = calc_ioctl,
+    .owner          = THIS_MODULE,
+   	.open           = calc_open,
+	.release        = calc_release,
+	.write          = calc_write,
+	.read           = calc_read,
+    .unlocked_ioctl = calc_ioctl,	
 
 };
 

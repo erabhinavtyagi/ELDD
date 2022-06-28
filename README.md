@@ -304,3 +304,12 @@ rmmod dynam
 dmesg
 exit 
 ```
+
+## Day 10
+
+1. Semaphore
+    - Normal
+    - Interruptible
+    - Trylock
+
+2. Spinlock

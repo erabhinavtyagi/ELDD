@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jun 28 12:24:43 2022
+# Make data base, printed on Mon Jun 27 22:32:37 2022
 
 # Variables
 
@@ -21,9 +23,9 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-dd6086ba-1f98-476b-888e-0a5b52f1d870.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b60c8de0-b085-4f3d-ab35-cd78c87c7b36.sock
 # environment
-VSCODE_CWD = /home/cdac/Abhinav/ELDD
+VSCODE_CWD = /home/cdac/Ajit/ELDD/11_sem_interrupt
 # default
 MAKE_COMMAND := make
 # environment
@@ -38,14 +40,12 @@ GDK_PIXBUF_MODULEDIR = /snap/code/99/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.1
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
-# environment
-PWD = /home/cdac/Abhinav/ELDD
+# makefile (from 'Makefile', line 6)
+PWD := /home/cdac/Ajit/ELDD/11_sem_interrupt
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
-# environment
-OLDPWD = /home/cdac/Abhinav
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -62,14 +62,14 @@ XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.LZH3N1
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile (from 'Makefile', line 4)
+KERNELDIR = /lib/modules/$(shell uname -r)/build
 # environment
-GNOME_TERMINAL_SERVICE = :1.1842
+GNOME_TERMINAL_SERVICE = :1.1614
 # makefile
 MAKEFLAGS = pqrR
-# environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=ef12cc64870c6762d7bd9e3062b70b13
 # makefile
-CURDIR := /home/cdac/Abhinav/ELDD
+CURDIR := /home/cdac/Ajit/ELDD/11_sem_interrupt
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -92,8 +92,8 @@ XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 +D = $(patsubst %/,%,$(dir $+))
 # environment
 XDG_SESSION_DESKTOP = ubuntu
-# makefile
-MAKEFILE_LIST := 
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
 # environment
 SNAP_REEXEC = 
 # automatic
@@ -101,7 +101,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 114173
+VSCODE_PID = 83275
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -113,7 +113,7 @@ SESSION_MANAGER = local/destroyer:@/tmp/.ICE-unix/1715,unix/destroyer:/tmp/.ICE-
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=ef12cc64870c6762d7bd9e3062b70b13
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
@@ -131,7 +131,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/1356df4e_f511_480b_af05_d06e92329fba
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/a448d68e_6929_4ed0_b77c_86fe3c3b2178
 # environment
 MAKELEVEL := 0
 # default
@@ -181,9 +181,9 @@ LOGNAME = cdac
 # environment
 SNAP_ARCH = amd64
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := default
 # environment
-SYSTEMD_EXEC_PID = 1715
+SYSTEMD_EXEC_PID = 70960
 # environment
 DISPLAY = :0
 # environment
@@ -192,6 +192,8 @@ USER = cdac
 GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
 # environment
 DISABLE_WAYLAND = 1
 # environment
@@ -199,9 +201,9 @@ SNAP_DATA = /var/snap/code/99
 # environment
 SNAP_CONTEXT = Ew71as25vUq6wR0xRVcxjLqam6oqkvJa1AqiPsUAwc7y6V3-qFL2
 # environment
-DBUS_STARTER_BUS_TYPE = session
-# environment
 XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 2)
+obj-m := sem_intr.o
 # environment
 COLORTERM = truecolor
 # environment
@@ -253,7 +255,7 @@ GDMSESSION = ubuntu
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=121/1024=12%, Rehash=0, Collisions=12/148=8%
+# Load=121/1024=12%, Rehash=0, Collisions=11/155=7%
 
 # Pattern-specific Variable Values
 
@@ -261,9 +263,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2053, inode 5508912): 22 files, no impossibilities.
+# . (device 2053, inode 6688318): 10 files, no impossibilities.
 
-# 22 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -271,12 +273,31 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Files
 
+default:
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 9):
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
+	gcc -o wr_1 wr_1.c
+	gcc -o wr_2 wr_2.c
+	gcc -o rd rd.c
+
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2022-06-27 22:31:41.716203091
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 15):
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) clean
+	rm wr_1 wr_2 rd
 
 # Not a target:
 .DEFAULT:
@@ -291,37 +312,20 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-makefile:
-#  Implicit rule search has been done.
- 
-make: *** No rule to make target 'all'.  Stop.
-
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
-
-# Not a target:
-GNUmakefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
-
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/16=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 30 / storage = 372 B / avg = 12 B
-# current buf: size = 8162 B / used = 372 B / count = 30 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 17 / storage = 151 B / avg = 8 B
+# current buf: size = 8162 B / used = 151 B / count = 17 / avg = 8 B
 
-# strcache performance: lookups = 33 / hit rate = 9%
+# strcache performance: lookups = 23 / hit rate = 26%
 # hash-table stats:
-# Load=30/8192=0%, Rehash=0, Collisions=0/33=0%
-# Finished Make data base on Tue Jun 28 12:24:43 2022
+# Load=17/8192=0%, Rehash=0, Collisions=0/23=0%
+# Finished Make data base on Mon Jun 27 22:32:37 2022
 
  
