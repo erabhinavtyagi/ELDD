@@ -217,11 +217,11 @@ After module insertion commands used are:
 mknod -m 777 /dev/char c 234 0
 ```
 Here,
-'777' is permissions
-/dev/char is name of Device File
-'c' - Char Device
-'234' - Major Number which is allocated by kernel to us dynamically
-'0' - Minor Number 
+- '777' is permissions
+- /dev/char is name of Device File
+- 'c' - Char Device
+- '234' - Major Number which is allocated by kernel to us dynamically
+- '0' - Minor Number 
 
 Create a device file dynamically using mknod and then check using "ls -l /dev/"
 
@@ -311,5 +311,16 @@ exit
     - Normal
     - Interruptible
     - Trylock
-
 2. Spinlock
+3. completions
+4. Sequential Locks
+5. Atomic Variable
+
+## Day 11
+
+Kernel Timers
+
+## Day 12
+
+**Hardware & Interrupts**
+1. Introduction to GPIO
